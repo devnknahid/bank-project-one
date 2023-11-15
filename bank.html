@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>money</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+   <header>
+      <h1 class="text-bg-dark text-center text-capitalize p-2">welcome to your<span
+            class="d-block text-danger">moneyyyy</span></h1>
+   </header>
+   <div class="d-flex justify-content-center">
+      <button id="logout" class="d-inline-block  text-capitalize bg-danger text-white p-1 btn ">logout</button>
+
+   </div>
+   <br><br>
+
+   <main>
+      <section>
+         <div class="container text-center">
+            <div class="row gap-5">
+               <div class="col bg-primary text-capitalize d-flex align-items-center text-white p-4"
+                  style="height: 200px;">
+                  <div class="d-flex flex-column text-start ">
+                     <h1>deposit</h1>
+                     <h3>$<span id="depositNumber">00</span></h3>
+                  </div>
+               </div>
+               <div class="col bg-success text-capitalize d-flex align-items-center text-white p-4"
+                  style="height: 200px;">
+                  <div class="d-flex flex-column text-start ">
+                     <h1>withdrow</h1>
+                     <h3>$<span id="withdrowNumber">00</span></h3>
+                  </div>
+               </div>
+               <div class="col bg-danger text-capitalize d-flex align-items-center text-white p-4"
+                  style="height: 200px;">
+                  <div class="d-flex flex-column text-start ">
+                     <h1>balance</h1>
+                     <h3>$<span id="blanceNumber">500</span></h3>
+                  </div>
+
+               </div>
+            </div>
+            <div class="row gap-5 mt-5">
+               <div class="col bg-primary text-capitalize d-flex align-items-center text-white" style="height: 200px;">
+                  <div class="d-flex flex-column text-start w-100 p-4">
+                     <h3>please deposit</h3>
+                     <div class="d-flex flex-column  justify-content-evenly" style="height: 100px;">
+                        <input type="number" name="" id="depositField" class="mt-1"
+                           placeholder="$ ammout you want to deposit">
+                        <button
+                           class="d-inline-block bg-black w-25 text-capitalize text-white p-2 mt-1 icon-link icon-link icon-link-hover"
+                           id="depositBtn">deposit</button>
+                     </div>
+                  </div>
+               </div>
+               <div class="col bg-success text-capitalize d-flex align-items-center text-white" style="height: 200px;">
+                  <div class="d-flex flex-column text-start  w-100 p-4">
+                     <h3>please withdrow</h3>
+                     <div class="d-flex flex-column  justify-content-evenly" style="height: 100px;">
+                        <input type="number" name="" id="withdrowField" class="mt-1"
+                           placeholder="$ amout you want to withdrow">
+                        <button
+                           class="d-inline-block bg-black w-25 text-capitalize text-white p-2 mt-1 icon-link icon-link icon-link-hover"
+                           id="withdrowBtn">withdrow</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <script src="js/deposit.js"></script>
+   <script src="js/withdrow.js"></script>
+</body>
+
+</html>
