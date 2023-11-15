@@ -19,9 +19,15 @@ document.getElementById('withdrowBtn').addEventListener('click', function () {
    const blanceNumberString = blanceNumber.innerText;
    const blanceNumberTotla = parseFloat(blanceNumberString);
 
+   // withdrowField
+   withdrowField.value = '';
+
+   if (withdrowAmount > blanceNumberTotla) {
+      alert('taka nai re vai');
+      return;
+   }
+
    const newBlanceNumber = blanceNumberTotla - withdrowAmount;
    blanceNumber.innerText = newBlanceNumber;
 
-   // withdrowField
-   withdrowField.value = '';
 })
