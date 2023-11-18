@@ -4,28 +4,33 @@ document.getElementById('withdrowBtn').addEventListener('click', function () {
    const withdrowField = document.getElementById('withdrowField');
    const withdrowFieldAmountString = withdrowField.value;
    const withdrowAmount = parseFloat(withdrowFieldAmountString);
-
+   // withdrowField
+   withdrowField.value = '';
+   
+   if (isNaN(withdrowAmount)) {
+      alert('please set number!');
+      return;
+   }
 
    // withdrowNumber
    const withdrowNumber = document.getElementById('withdrowNumber');
    const withdrowNumberTolat = withdrowNumber.innerText;
    const withdrowNumberTolatString = parseFloat(withdrowNumberTolat);
 
-   const currentWithdrowTotal = withdrowNumberTolatString + withdrowAmount;
-   withdrowNumber.innerText = currentWithdrowTotal;
 
    // blanceNumber
    const blanceNumber = document.getElementById('blanceNumber');
    const blanceNumberString = blanceNumber.innerText;
    const blanceNumberTotla = parseFloat(blanceNumberString);
 
-   // withdrowField
-   withdrowField.value = '';
+
 
    if (withdrowAmount > blanceNumberTotla) {
       alert('taka nai re vai');
       return;
    }
+   const currentWithdrowTotal = withdrowNumberTolatString + withdrowAmount;
+   withdrowNumber.innerText = currentWithdrowTotal;
 
    const newBlanceNumber = blanceNumberTotla - withdrowAmount;
    blanceNumber.innerText = newBlanceNumber;

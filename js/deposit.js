@@ -10,7 +10,12 @@ document.getElementById('depositBtn').addEventListener('click', () => {
    const depositField = document.getElementById('depositField');
    const currentDepositAmountString = depositField.value;
    const currentDepositAmount = parseFloat(currentDepositAmountString);
-
+   // depositField empty
+   depositField.value = '';
+   if (isNaN(currentDepositAmount)) {
+      alert('please fill by number!');
+      return
+   }
    // depositNumber
    const depositNumber = document.getElementById('depositNumber');
    const perviousTotalDepositString = depositNumber.innerText;
@@ -28,8 +33,7 @@ document.getElementById('depositBtn').addEventListener('click', () => {
    blanceNumberString.innerText = newBlance;
 
 
-   // depositField empty
-   depositField.value = '';
+
 
 
 })
